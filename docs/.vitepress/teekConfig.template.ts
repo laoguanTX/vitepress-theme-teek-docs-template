@@ -10,7 +10,7 @@ export const teekConfig = defineTeekConfig({
   teekTheme: true, // 是否启用 Teek 主题
   teekHome: true, // 是否启用 Teek 的首页风格（博客风格），如果为 false，则还原到 VitePress 的默认首页
   vpHome: true, // 是否启用 VitePress 首页风格，支持 teekHome 和 vpHome 同时存在
-  loading: false, // 页面加载 Loading 动画配置，如果为 boolean，则控制是否启用，如果为字符串，则指定加载 Loading 动画的文案
+  loading: true, // 页面加载 Loading 动画配置，如果为 boolean，则控制是否启用，如果为字符串，则指定加载 Loading 动画的文案
   homeCardListPosition: "right", // 首页卡片栏列表位置，当为 left 则在文章列表左侧，当为 right 则在文章列表右侧
   anchorScroll: true, // 是否启用锚点滚动功能，即阅读文章时，自动将 h1 ~ h6 标题添加到地址栏 # 后面
   // 深色、浅色模式切换时是否开启过渡动画
@@ -85,12 +85,12 @@ export const teekConfig = defineTeekConfig({
   },
   // 文章默认的作者信息
   author: {
-    name: "Teeker", // 作者名称
-    link: "https://github.com/Kele-Bingtang", // 点击作者名称后跳转的链接
+    name: "视觉工作室-老官童鞋gogo", // 作者名称
+    link: "https://www.laoguantx.top", // 点击作者名称后跳转的链接
   },
   // 公告配置
   notice: {
-    enabled: true, // 是否启用公告功能
+    enabled: false, // 是否启用公告功能
     title: "公告", // 公告标题，支持函数式：需要和国际化搭配使用，根据不同语言环境返回不同标题
     initOpen: true,
     duration: 0, // 弹框定时自动关闭，0 不自动消失
@@ -110,7 +110,7 @@ export const teekConfig = defineTeekConfig({
   // 首页 Banner 配置，位于首页顶部
   banner: {
     enabled: true, // 是否启用 Banner
-    name: "Teek", // Banner 标题，默认读取 vitepress 的 title 属性
+    name: "视觉工作室", // Banner 标题，默认读取 vitepress 的 title 属性
     bgStyle: "fullImg", // Banner 背景风格：pure 为纯色背景，partImg 为局部图片背景，fullImg 为全屏图片背景
     pureBgColor: "#28282d", // Banner 背景色，bgStyle 为 pure 时生效
     imgSrc: ["/img/bg1.jpg", "/img/bg2.png"], // Banner 图片链接。bgStyle 为 partImg 或 fullImg 时生效
@@ -124,8 +124,6 @@ export const teekConfig = defineTeekConfig({
     descFontSize: "1.4rem", // 描述字体大小
     descStyle: "types", // 描述信息风格：default 为纯文字渲染风格（如果 description 为数组，则取第一个），types 为文字打印风格，switch 为文字切换风格
     description: [
-      "故事由我书写，旅程由你见证，传奇由她聆听 —— 来自 Young Kbt",
-      "积跬步以至千里，致敬每个爱学习的你 —— 来自 Evan Xu",
     ], // 描述信息
     switchTime: 4000, // 描述信息切换间隔时间，单位：毫秒。descStyle 为 switch 时生效
     switchShuffle: false, // 描述信息是否随机切换，为 false 时按顺序切换。descStyle 为 switch 时生效
@@ -364,7 +362,7 @@ export const teekConfig = defineTeekConfig({
   // 面包屑配置
   breadcrumb: {
     enabled: true, // 是否启用面包屑
-    showCurrentName: false, // 面包屑最后一列是否显示当前文章的文件名
+    showCurrentName: true, // 面包屑最后一列是否显示当前文章的文件名
     separator: "/", // 面包屑分隔符
     homeLabel: "首页", // 鼠标悬停首页图标的提示文案
   },

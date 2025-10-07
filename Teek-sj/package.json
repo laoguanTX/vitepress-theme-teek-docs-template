@@ -1,0 +1,24 @@
+{
+  "name": "Teek-sj",
+  "version": "1.0.0",
+  "description": "A documentation project using VitePress with custom themes.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "keywords": [
+    "vitepress",
+    "documentation",
+    "markdown"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "vitepress": "^0.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0"
+  }
+}

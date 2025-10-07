@@ -2,50 +2,45 @@
 layout: home
 
 hero:
-  name: Teek
-  text: VitePress 主题
-  tagline: ✨一个轻量、简洁高效、灵活配置，易于扩展的 VitePress 主题
+  name: Welcome
+  text: 视觉工作室
+  tagline: ✨浙江大学竺可桢学院全媒体中心视觉工作室站点
   actions:
     - theme: brand
-      text: 开始
-      link: /guide/quickstart
+      text: 关于我们
+      link: /about
     - theme: alt
-      text: 配置
-      link: /reference/config
+      text: 出锅实录
+      link: /tasks
+    - theme: alt
+      text: 例会周记
+      link: /meetings
   image:
-    src: /teek-logo-large.png
-    alt: Teek
-
-features:
-  - icon: 📖
-    title: 结构化 && 体系化
-    details: 自动生成侧边栏、目录页、索引页、面包屑等，轻松构建一个结构化知识库。
-  - icon: 🎉
-    title: 碎片化 & 个性化
-    details: 提供快速构建知识的碎片化形态，并提供大量个性化的主题配置。
-  - icon: 🎇
-    title: 文档风 & 博客风
-    details: 支持通过配置搭配出各种风格，支持个人博客、文档站、知识库等场景。
-  - icon: 📝
-    title: 专注内容
-    details: 只需 Markdown 即可轻松创建美观的文档站点，配合多维索引快速定位每个知识点。
+    src: /visualstudio-logo.jpg
+    alt: 视觉工作室
 ---
 
-## 风格切换
+---
 
-Teek 可以通过配置搭配出各种风格，而当前文档站默认仅演示较简约的文档风格。
+## 此刻，我对着亲爱的友人宣誓：
 
-在右上角 <TkIcon :icon="readingIcon" :size="20" /> 图标的 <mark>配置切换</mark> 区域可以切换其他风格。因为配置较多，很多的功能并没有完全演示，需要安装 Teek，然后自行探索出自己喜欢的风格。
+<div class="pledge" role="region" aria-label="誓言">
+  <p>我站在这里是出于真诚的热爱。</p>
 
-## 💡 反馈交流
+  <p>我认同全媒体 “为每一个普通的竺院人发声” 的理想。</p>
 
-在使用过程中有任何问题和想法，请给我提 [Issue](https://github.com/Kele-Bingtang/vitepress-theme-teek/issues)。 你也可以在 Issue 查看别人提的问题和解决方案。
+  <p>我坚信全媒体 “让每一个小伙伴感到快乐” 的愿望。</p>
 
-或者加入我们的交流群（添加我的微信并备注 <mark>进群</mark>）：
+  <p>我将做 “最现实的理想主义者” 视作我的志向。</p>
 
-<img src="https://gcore.jsdelivr.net/gh/Kele-Bingtang/static/index/20250412000919.png" alt="添加我微信备注「进群」" style="width: 180px;" />
+  <p>我是能力微薄的普通人，但此刻我愿意郑重承诺，</p>
 
-如果图片链接失效，可以在微信右上角 -> 添加朋友，然后搜索 `teekers` 来添加我的微信。
+  <p>面对困难与未知，我会认真守护爱我与我所爱的一切。</p>
+
+  <p class="pledge-sign">——从今天起，到永远。</p>
+</div>
+
+---
 
 <script setup lang="ts">
 import { onMounted } from "vue";
@@ -87,6 +82,44 @@ onMounted(() => {
 
 .vp-doc #hero-text {
   display: none !important;
+}
+
+/* 誓言样式：仿宋字体、放大字号、居中 */
+.pledge {
+  font-family: "仿宋", "FangSong", "FangSong_GB2312", serif;
+  text-align: center;
+  font-size: 20px; /* 默认字号 */
+  line-height: 1.8;
+  max-width: 880px;
+  color: var(--vp-c-text-1);
+}
+.pledge p {
+  margin: 0.45rem 0;
+}
+
+/* 除最后一行外靠左并距离左边界 1/3（33.333%） */
+.pledge p:not(.pledge-sign) {
+  text-align: left;
+  margin-left: 10%;
+}
+
+/* 小屏降级：使用较小的左边距以避免过多缩进 */
+@media (max-width: 639px) {
+  .pledge p:not(.pledge-sign) {
+    margin-left: 1rem;
+    max-width: calc(100% - 2rem);
+  }
+}
+.pledge-sign {
+  margin-top: 0.9rem;
+  font-weight: 600;
+}
+
+@media (min-width: 640px) {
+  .pledge { font-size: 22px; }
+}
+@media (min-width: 960px) {
+  .pledge { font-size: 26px; }
 }
 
 @media (min-width: 640px) {
